@@ -47,7 +47,7 @@ export class MessageService {
       }
       console.log(e);
       throw new HttpException(
-        e.message || 'Internal Server Error',
+        e || 'Internal Server Error',
         e.response.status || HttpStatusCode.InternalServerError,
       );
     }
